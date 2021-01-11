@@ -6,13 +6,24 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Cristian Neacsu Developer Portfolio Website" content="">
-  <meta name="Cristian Neacsu" content="">
-  <title>Cristian Neacsu Developer Portfolio</title>
+  <meta name="FairFood" content="">
+  <meta name="FairFood" content="">
+  <title>FairFood</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" size="32x32">
 
   <!-- LinkedIn Widget Script -->
   <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+
+
+
+
+
+
+
+
+
+
 
   <!-- Google Analytics script -->
   <script>
@@ -61,8 +72,7 @@
           <span class="sr-only">Toggle navigation</span> Menu
           <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand" href="#page-top">
-          <i class="fa fa-code" id="facolor" aria-hidden="true"></i> Cristian Neacsu </a>
+        <a class="navbar-brand logonav" href="#page-top"><first>Fair</first><sec>Food</sec> </a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -92,52 +102,150 @@
 
   <!-- Header -->
   <header>
-    <div class="container" id="maincontent" tabindex="-1">
-      <div class="row">
-        <div class="col-lg-12">
-          <img class="img-responsive" id="profile-pic" src="img/profilepic.jpg" alt="">
-          <div class="intro-text">
-            <h1 class="name">Full Stack Developer</h1>
-			<h3 >Degree of Bachelor of Science in Computer Science with First Class Honours at Swansea University UK</h3>
-            <hr class="star-light">
-            <span class="skills">
-				<ol>
-					<li>Main programming language: Java.
-					</li>
-					<li>Secondary programming languages: C++, Kotlin, Python3, C#, Haskell, Prolog.
-					</li>
-					<li>Databases: MySQL, SQLite, Android Firebase, Hibernate (ORM) framework.
-					</li>
-					<li>Web development: Laravel framework, PHP, HTML, CSS, Bootstrap, JavaScript. (interested to learn: Asp.Net, React, Angular, Django)
-					</li>
-					<li>Data mark-up/transferring/organising/version control: XML, Json, Git.
-					</li>
-					<li>Testing: Junit.
-					</li>
-					<li>Blockchain: Solidity, Web3j (console, Truffle framework, Remix IDE).
-					</li>
-					<li>Other software experience: Latex, R, Maven, Visual Studio, Unity/Unreal Engine, Adobe Photoshop/Premier.
-					</li>
-				</ol>
-			</span>			
-			<ul class="list-inline">
-              <li>
-                <a href="https://github.com/cristocer" target="_blank" class="btn-social-header btn-outline">
-                  <span class="sr-only">Github</span>
-                  <i class="fa fa-fw fa-github"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/cristian-neacsu-aa6638175" target="_blank" class="btn-social-header btn-outline">
-                  <span class="sr-only">Linked In</span>
-                  <i class="fa fa-fw fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    <section id="portfolio">
+    <div class="container-fluid">
+		
+		<div class="row">
+		<div class="col-lg-12 text-center">
+		  <h2>We track and show everything about anything !<h2>
+		  <h4>Using Blockchain, NFC and Smartphone technologies<h4>
+		  <hr class="star-primary">
+		  <br>
+		</div>
+		</div>
+		
+		
+		<!-- Slider -->
+		<div class="slideshow-container">
+
+		<div class="mySlides fade">
+		  <img src="img/portfolio/1.jpg" style="width:100%">
+		  
+		</div>
+
+		<div class="mySlides fade">
+		  <img src="img/portfolio/2.jpg" style="width:100%">
+		  
+		</div>
+
+		<div class="mySlides fade">
+		  <img src="img/portfolio/berry.png" style="width:100%">
+		  
+		</div>
+		<a class="prev" onclick="plusSlides(-2)">&#10094;</a>
+		<a class="next" onclick="plusSlides(0)">&#10095;</a>
+		</div>
+		<br>
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+		  <span class="dot"  onclick="currentSlide(1)"></span> 
+		  <span class="dot"  onclick="currentSlide(2)"></span> 
+		  <span class="dot"  onclick="currentSlide(3)"></span> 
+		</div>
+		<br>		
+		
+		<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+		var timeout;
+		function plusSlides(n) {
+		clearTimeout(timeout);
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  clearTimeout(timeout);
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n == -1) {slideIndex = slides.length}
+		  if (n == 0) {slideIndex = 3}
+		  for (i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";  
+		  }
+		  
+		  for (i = 0; i < dots.length; i++) {
+			  dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  slideIndex++;
+		  timeout=setTimeout(showSlides, 10000);
+		}
+		</script>
+
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="col-xl-2  col-sm-offset-1">
+			<div class="row work-item-row ">
+			
+				<div class="col-md-6 portfolio-item " >
+				
+					<a href="#portfolioModal1" class="portfolio-link " data-toggle="modal">
+						<div class="caption">
+						  <div class="caption-content">
+							<i class="fa fa-search-plus fa-3x"></i>
+						  </div>
+						</div>
+						<img style="height:400px; width: 700px;" src="img/portfolio/fairfoodback.png" class="img-responsive " alt="picgallery">
+					 </a>
+					 <div class="col-lg-5">
+					<h3>FairFood - Track Food from farm to plate with NFC blockchain</h3>
+					<h4><br>Problem</h4>
+					<p> Recent supply chains flaws called into question goods safety, traceability, visibility, recycling capabilities, fraud protection, customer trust, law compliance and competitive survival.</p>
+					<h4><br>Solution</h4>
+					<p> 1. A system that can provide transparent and accurate information about a product’s provenance and attributes.
+					<br>2. A solution for tracing accurately a unique product in the world.
+					<br>3. Efficient and accessible application that allows clients to get fast, detailed and nicely displayed information about a product.
+					<br>4. Increasing trust between entities in a supply chain.
+					</p> 
+				</div>
+				
+				</div>
+				
+				
+				<div class="col-md-6 portfolio-item ">
+				
+					<a href="#portfolioModal2" class="portfolio-link " data-toggle="modal">
+						<div class="caption">
+						  <div class="caption-content">
+							<i class="fa fa-search-plus fa-3x"></i>
+						  </div>
+						</div>
+						<img style="height:400px; width: 700px;" src="img/portfolio/excelAutomation.png" class="img-responsive " alt="picgallery">
+					 </a>
+					 <div class="col-lg-5">
+					<h3>Migrating automatically data from Google Calendar to Excel</h3>
+					<h4><br>Problem</h4>
+					<p> Design and implement a system that extract data from a shared Google calendar and process it into programatically Excell spreadsheets</p>
+					<h4><br>Solution</h4>
+					<p> A script that automatically extracts and serializes all data from a business shared Google calendar and deserializes it on a server as custom Excel spreadsheets. 
+					<br> Extracted and backed up data is organized in a custom tabular human readable format, that administative teams and HR could easily use for legal and management activities.	
+					</div>
+					
+				</div>
+				
+				
+			</div>
+			<br>
+			
+		</div>
+		
+
+		</div>
+		</section>
   </header>
  
   
