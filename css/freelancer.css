@@ -94,24 +94,102 @@ hr.star-primary:after {
 }
 
 
+/*Carousel*/
+img { max-width:100%; max-height:100%; }
+
+a {
+	-webkit-transition: all 150ms ease;
+	-moz-transition: all 150ms ease;
+	-ms-transition: all 150ms ease;
+	-o-transition: all 150ms ease;
+	transition: all 150ms ease; 
+	}
+    a:hover {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+        filter: alpha(opacity=50); /* IE7 */
+        opacity: 0.6;
+        text-decoration: none;
+    }
 
 
 
-
-
-
-
-* {box-sizing: border-box;}
-.mySlides {display: none;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 2000px;
-  position: relative;
+/* image text under carousel */
+.caption-slider {
+    height: 180px;
+    width: 100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+.caption-slider .span4, .caption .span8 {
+    padding: 0px 20px;
+}
+.caption-slider .span4 {
+    border-right: 1px dotted #CCCCCC;
+}
+.caption-slider h3 {
+    color: #a83b3b;
+    line-height: 2rem;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    }
+    .caption-slider p {
+        font-size: 1rem;
+        line-height: 1.6rem;
+        color: #a83b3b;
+        }
+        .btn.btn-mini {
+            background: #a83b3b;
+            border-radius: 0 0 0 0;
+            color: #fbf4e0;
+            font-size: 0.63rem;
+            text-shadow: none !important;
+            }
+.carousel-control {
+	
+   top: 10%;
+bottom: 40%;
+cursor: pointer;
+  height: 30px;
+  width: 30px;
   margin: auto;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.carousel-control.prev {
+    left: 2%;
 }
 
+.carousel-control.next {
+    right: 2%;
+}
+ol.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+}
 
+ol.carousel-indicators li,
+ol.carousel-indicators li.active {
+  float: none;
+  width: 10%;
+  height: 10px;
+  margin: 0;
+  
+  border-radius: 9px 9px 9px 9px;
+  border: 0;
+  background: #f2f2f2;
+}
+
+ol.carousel-indicators li.active {
+  background: #518ef0;
+}
 /* The dots/bullets/indicators */
 .dot {
 	
@@ -127,73 +205,23 @@ hr.star-primary:after {
   
 }
 
-.active {
-  background-color: #e6ffff;
-}
-
 /* Fading animation */
-.fade {
+.fadescroll {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 10s;
   animation-name: fade;
   animation-duration: 10s;
 }
 
-@-webkit-keyframes fade {
+@-webkit-keyframes fadescroll {
   from {opacity: .8} 
   to {opacity: 1}
 }
 
-@keyframes fade {
+@keyframes fadescroll {
   from {opacity: .8} 
   to {opacity: 1}
 }
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev {
-  left: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a grey background color */
-.prev:hover, .next:hover {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -353,8 +381,9 @@ header .intro-text .skills {
 }
 
 .navbar-custom .navbar-nav li.active a {
-  color: black;
+  color: white;
   background: #518ef0;
+  border-radius: 35px / 30px;
 }
 .logonav {
  }
@@ -368,7 +397,7 @@ header .intro-text .skills {
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
-  color: black;
+  color: white;
   background: #518ef0;
 }
 
@@ -388,21 +417,10 @@ header .intro-text .skills {
 
 /*resume css*/
 
-/*resume css*/
-
-/*resume css*/
-
-/*resume css*/
-
-/*resume css*/
-
-/*resume css*/
-
-/*resume css*/
 
 @media (min-width: 768px) {
   .navbar-custom {
-    padding: 25px 0;
+    padding: 15px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
     transition: padding 0.3s;
@@ -413,11 +431,21 @@ header .intro-text .skills {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
   }
+  
   .navbar-custom.affix {
-    padding: 10px 0;
+    padding: 5px 0;
   }
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
+  }
+  .page-scroll {
+    font-size: 1em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .navbar-custom.affix .page-scroll{
+    font-size: 0.8em;
   }
 }
 

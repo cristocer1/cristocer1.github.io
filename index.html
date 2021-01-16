@@ -14,17 +14,6 @@
   <!-- LinkedIn Widget Script -->
   <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
-
-
-
-
-
-
-
-
-
-
-
   <!-- Google Analytics script -->
   <script>
     (function (i, s, o, g, r, a, m) {
@@ -103,8 +92,98 @@
   <!-- Header -->
   <header>
     <section id="portfolio">
-    <div class="container-fluid">
+     <div class="container-fluid">
 		
+		
+			
+			
+		<!-- Slider/carousel -->
+		<div class="container-fluid">
+		<div class="row-fluid">
+		<div class="span12">
+		<div class="carousel slide " id="myCarousel" data-ride="carousel">
+			 <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active dot"></li>
+    <li data-target="#myCarousel" data-slide-to="1" class="dot"></li>
+    <li data-target="#myCarousel" data-slide-to="2" class="dot"></li>
+  </ol>
+  
+			<div class="carousel-inner" >
+
+				<div class="item embed-responsive-item active ">
+				
+					<div class="bannerImage ">
+						<a href="#"><img src="img/portfolio/gi1.gif" width="1300" height="450" alt=""></a>
+					</div>
+								
+					<div class="caption-slider row-fluid">
+						<div class="span4"><h3>Nullam Condimentum Nibh Etiam Sem</h3>
+						<a class="btn btn-mini" href="#">&raquo; Read More</a>
+						</div>                	
+						<div class="span8"><p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+						</div>
+					</div>
+															 
+				</div><!-- /Slide1 --> 
+
+				<div class="item embed-responsive-item">
+				
+					<div class="bannerImage ">
+						<a href="#"><img src="img/portfolio/axios.png" width="1300" height="450" alt=""></a>
+					</div>
+								
+					<div class="caption-slider row-fluid">
+						<div class="span4"><h3>Nullam Condimentum Nibh Etiam Sem</h3>
+						<a class="btn btn-mini" href="#">&raquo; Read More</a>
+						</div>                	
+						<div class="span8"><p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+						</div>
+					</div>
+															 
+				</div><!-- /Slide2 -->             
+
+				<div class="item embed-responsive-item">
+				
+					<div class="bannerImage ">
+						<a href="#"><img src="http://placehold.it/960x405" width="1300" height="450" alt=""></a>
+					</div>
+								
+					<div class="caption-slider row-fluid">
+						<div class="span4"><h3>Nullam Condimentum Nibh Etiam Sem</h3>
+						<a class="btn btn-mini" href="#">&raquo; Read More</a>
+						</div>                	
+						<div class="span8"><p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+						</div>
+					</div>
+															 
+				</div><!-- /Slide2 -->                      
+				
+			</div>
+			
+			<div class="control-box">                            
+				<a data-slide="prev" href="#myCarousel" class="carousel-control left">&#10094;</a>
+				<a data-slide="next" href="#myCarousel" class="carousel-control right">&#10095;</a>
+			</div><!-- /.control-box -->   
+								  
+		</div><!-- /#myCarousel -->
+				
+		</div><!-- /.span12 -->          
+		</div><!-- /.row --> 
+		</div><!-- /.container -->
+
+    </div>            
+	
+
+		
+		</section>
+  </header>
+ 
+  
+  <!-- Portfolio Grid Section -->
+  <section id="portfolio">
+  
+    <div class="container-fluid">
 		<div class="row">
 		<div class="col-lg-12 text-center">
 		  <h2>We track and show everything about anything !<h2>
@@ -113,149 +192,8 @@
 		  <br>
 		</div>
 		</div>
-		
-		
-		<!-- Slider -->
-		<div class="slideshow-container">
-		<a class=" dot "  onclick="currentSlide(1)">Advantages For Customers</a> 
-		<a class="dot "  onclick="currentSlide(2)">Advantages For Businesses</a> 
-		<a class="dot "  onclick="currentSlide(3)">Advantages For Producers</a> 
-		<div class="mySlides fade">
-		  <img src="img/portfolio/1.jpg" style="width:100%">
-		  
-		</div>
-
-		<div class="mySlides fade">
-		  <img src="img/portfolio/2.jpg" style="width:100%">
-		  
-		</div>
-
-		<div class="mySlides fade">
-		  <img src="img/portfolio/berry.png" style="width:100%">
-		  
-		</div>
-		<a class="prev" onclick="plusSlides(-2)">&#10094;</a>
-		<a class="next" onclick="plusSlides(0)">&#10095;</a>
-		
-		</div>
-		<br>
-		<!-- The dots/circles -->
-		
-		<br>		
-		
-  
-		<script>
-		var slideIndex = 1;
-		showSlides(slideIndex);
-		var timeout;
-		function plusSlides(n) {
-		clearTimeout(timeout);
-		showSlides(slideIndex += n);
-		}
-
-		function currentSlide(n) {
-		  clearTimeout(timeout);
-		  showSlides(slideIndex = n);
-		}
-
-		function showSlides(n) {
-		  var i;
-		  var slides = document.getElementsByClassName("mySlides");
-		  var dots = document.getElementsByClassName("dot");
-		  
-		  if (n > slides.length||slideIndex> slides.length) {slideIndex = 1;n=1;}    
-		  if (n == -1) {slideIndex = 3;n=3;}
-		  if (n == 0) {slideIndex = 3;n=3;}
-		  for (i = 0; i < slides.length; i++) {
-			  slides[i].style.display = "none";  
-		  }
-		  
-		  for (i = 0; i < dots.length; i++) {
-			  dots[i].className = dots[i].className.replace(" active", "");
-		  }
-		  slides[slideIndex-1].style.display = "block";  
-		  dots[slideIndex-1].className += " active";
-		  slideIndex++;
-
-		  //if (slideIndex > slides.length) {slideIndex = 1} 
-		  //
-		  timeout=setTimeout(showSlides, 10000);
-		  
-		}
-		</script>
-
-		
-		
-		
-		
-		
-		
-		
-		
-		<div class="col-xl-2  col-sm-offset-1">
-			<div class="row work-item-row ">
-			
-				<div class="col-md-6 portfolio-item " >
-				
-					<a href="#portfolioModal1" class="portfolio-link " data-toggle="modal">
-						<div class="caption">
-						  <div class="caption-content">
-							<i class="fa fa-search-plus fa-3x"></i>
-						  </div>
-						</div>
-						<img style="height:400px; width: 700px;" src="img/portfolio/fairfoodback.png" class="img-responsive " alt="picgallery">
-					 </a>
-					 <div class="col-lg-5">
-					<h3>FairFood - Track Food from farm to plate with NFC blockchain</h3>
-					<h4><br>Problem</h4>
-					<p> Recent supply chains flaws called into question goods safety, traceability, visibility, recycling capabilities, fraud protection, customer trust, law compliance and competitive survival.</p>
-					<h4><br>Solution</h4>
-					<p> 1. A system that can provide transparent and accurate information about a product’s provenance and attributes.
-					<br>2. A solution for tracing accurately a unique product in the world.
-					<br>3. Efficient and accessible application that allows clients to get fast, detailed and nicely displayed information about a product.
-					<br>4. Increasing trust between entities in a supply chain.
-					</p> 
-				</div>
-				
-				</div>
-				
-				
-				<div class="col-md-6 portfolio-item ">
-				
-					<a href="#portfolioModal2" class="portfolio-link " data-toggle="modal">
-						<div class="caption">
-						  <div class="caption-content">
-							<i class="fa fa-search-plus fa-3x"></i>
-						  </div>
-						</div>
-						<img style="height:400px; width: 700px;" src="img/portfolio/excelAutomation.png" class="img-responsive " alt="picgallery">
-					 </a>
-					 <div class="col-lg-5">
-					<h3>Migrating automatically data from Google Calendar to Excel</h3>
-					<h4><br>Problem</h4>
-					<p> Design and implement a system that extract data from a shared Google calendar and process it into programatically Excell spreadsheets</p>
-					<h4><br>Solution</h4>
-					<p> A script that automatically extracts and serializes all data from a business shared Google calendar and deserializes it on a server as custom Excel spreadsheets. 
-					<br> Extracted and backed up data is organized in a custom tabular human readable format, that administative teams and HR could easily use for legal and management activities.	
-					</div>
-					
-				</div>
-				
-				
-			</div>
-			<br>
-			
-		</div>
-		
-
-		</div>
-		</section>
-  </header>
- 
-  
-  <!-- Portfolio Grid Section -->
-  <section id="portfolio">
-    <div class="container-fluid">
+	
+	
 		<div class="row">
 		<div class="col-lg-12 text-center">
 		  <h2>My Projects </h2>
@@ -808,9 +746,9 @@
         <div class="row">
           <div class="footer-col col-md-4">
             <h3>Current Location:</h3>
-            <p>Romania</p>
+            <p>United Kingdom</p>
             <br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d649590.5639952275!2d27.022864750922707!3d44.58966264897377!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sro!4v1604001121160!5m2!1sen!2sro"
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10020.101369480233!2d-0.20603127490613674!3d51.10799259255578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875ee11efbac383%3A0xd548ae0d32b53721!2sSouthgate%2C%20Crawley!5e0!3m2!1sen!2suk!4v1610604827242!5m2!1sen!2suk"
               width="300" height="200" frameborder="0" style="border-radius: 20px" allowfullscreen></iframe>
           </div> 
           <div class="footer-col col-md-4">
@@ -1614,8 +1552,7 @@
     </div>
   </div>
   
-  
-  
+ 
   <!-- jQuery -->
   <script src="vendor/jquery/jquery.min.js "></script>
 
@@ -1624,6 +1561,9 @@
 
   <!-- Plugin JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js "></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css "></script>
+
 
   <!-- Contact Form JavaScript -->
   <script src="js/jqBootstrapValidation.js "></script>
@@ -1631,6 +1571,14 @@
 
   <!-- Theme JavaScript -->
   <script src="js/freelancer.min.js "></script>
+   <!--</div>-->
+		<script type="text/javascript">
+		  $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 8000
+    })
+  });
+</script>
 
 </body>
 
